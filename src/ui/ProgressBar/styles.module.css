@@ -1,0 +1,69 @@
+.progressBar {
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+}
+
+.wave {
+  width: 100%;
+  border: solid transparent;
+  border-width: 0 0 8px;
+  border-image-source: url('../../assets/wave.svg');
+  border-image-repeat: repeat;
+  border-image-slice: 0 0 14;
+}
+
+.valueWrapper {
+  position: relative;
+  top: 6px;
+  width: max-content;
+}
+
+.value {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 700;
+  text-shadow: 0 0 2px #ebc284;
+  color: #ebc284;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.progressLine {
+  height: 20px;
+  width: 100%;
+}
+
+.topLine {
+  display: grid;
+  background-color: #fe6102;
+  height: 100%;
+  width: 100%;
+  padding: 2px;
+  position: relative;
+}
+.topLine::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    to right,
+    #ebc284 0%,
+    transparent 10%,
+    #ebc284 15%,
+    #ebc284 20%
+  );
+  background-size: 20px 30px;
+}
+
+.topLine::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: #f7e7d8;
+  box-shadow: 0 0 6px 2px #fff;
+}
