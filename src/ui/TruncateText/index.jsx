@@ -40,7 +40,6 @@ export const TruncateText = (props) => {
 
   useEffect(() => {
     return () => {
-      console.log('re')
       observer.disconnect();
     };
   }, []);
